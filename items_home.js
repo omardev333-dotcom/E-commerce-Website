@@ -1,4 +1,4 @@
-fetch('products.json')
+fetch('product.json')
 .catch(error=>{
 console.error(error)
 })
