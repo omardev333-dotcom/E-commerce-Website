@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="description" content="OMAR Online Shop offers electronics, mobiles, appliances, accessories and amazing daily deals with fast shopping experience.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" href="icon.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>OMAR | ONLINE SHOP</title>
+</head>
+<body>
+  
+  <div class="cart">
+    <div class="top_cart">
+      <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+      <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+    </div>
+    
+    <div class="items_in_cart" id="cart_items">
+      <div class="item_cart">
+        <img loading="lazy" decoding="async" src="10.webp" alt="">
+        <div class="content">
+          <h4>Lorem ipsum dolor, sit amet elit.</h4>
+          <p class="price_cart">$80</p>
+          <div class="quantity_control">
+            <button class="decrease_quantity" aria-label>-</button>
+            <span class="quantity">3</span>
+            <button class="increase_quantity" aria-label>+</button>
+          </div>
+        </div>
+        <button class="delete_item" aria-label><i class="fa-solid fa-trash-can"></i></button>
+      </div>
+    </div>
+    
+    <div class="bottom_cart">
+      <div class="total">
+        <p>subtotal</p>
+        <p class="price_cart_total">$0</p>
+      </div>
+      
+      <div class="button_cart">
+        <a href="#" class="btn_cart btn">Checkout</a>
+        <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+      </div>
+    </div>
+  </div>
+  
+  <header>
+    <div class="top_header">
+      <div class="container">
+        <a href="#" class="logo"><img loading="lazy" decoding="async" src="logo.webp"> </a>
+        <form action="" class="search_box">
+          <div class="select_box">
+            <select id="category" name="category">
+              <option value="All Categories">All Categories</option>
+              <option value="Electronics & Digita">Electronics & Digita</option>
+              <option value="Phones & Tablet">Phones & Tablet</option>
+              <option value="Fashion & Clothings">Fashion & Clothings</option>
+              <option value="Telivsion & Monitor">Telivsion & Monitor</option>
+              <option value="Jewelry & Watches">Jewelry & Watches</option>
+              <option value="Washing Machine">Washing Machine</option>
+              <option value="Toys & Hobbies">Toys & Hobbies</option>
+            </select>
+          </div>
+          
+          <input type="text" id="search" name="search" placeholder="Search For Products" required>
+          <button type="submit" aria-label><i class="fa-solid fa-magnifying-glass"></i></button>
+          
+        </form>
+        
+        <div class="header_icons">
+          <div class="icon">
+            <i class="fa-regular fa-heart"></i>
+            <span class="count count_favourite">0</span>
+          </div>
+          <div onclick="open_close_cart()" class="icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="count count_item_header">0</span>
+          </div>
+        </div>
+       </div>
+    </div>
+    
+    <div class="bottom_header">
+      <div class="container">
+        <nav class="nav">
+          
+          <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+          <div class="category_nav">
+            <div onclick="Open_Categ_list()" class="category_btn">
+              <i class="fa-solid fa-bars"></i>
+              <p>Browse Category</p>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            
+            <div class="category_nav_list">
+              <a href="#" >Top 10 Offers</a>
+              <a href="#" >Electronics & Digita</a>
+              <a href="#" >Phones & Tablet</a>
+              <a href="#" >Fashion & Clothings</a>
+              <a href="#" >Telivsion & Monitor</a>
+              <a href="#" >Jewelry & Watches</a>
+              <a href="#" >Washing Machine</a>
+              <a href="#" >Toys & Hobbies</a>
+            </div>
+          </div>
+          <ul class="nav_links">
+            
+            <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+            
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#accesories">Accesories</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="login_signup btns">
+          <a href="#" class="btn">log in<i class="fa-solid fa-right-to-bracket"></i></a>
+          <a href="#" class="btn">sign up<i class="fa-solid fa-user-plus"></i></a>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+  
+  
+  <section class="checkout">
+    <form id="form_contact" method="post" action="url/google_sheet">
+      
+      <input type="hidden" id="items" name="items">
+      <input type="hidden" id="total_Price" name="Total Price">
+      <input type="hidden" id="count_Items" name="Count Items">
+      <div class="container">
+        <div class="ordersummary">
+          <h1>Order Summary</h1>
+          
+          <div class="items" id="checkout_items">
+
+          </div>
+          
+          <div class="bottom_summary">
+            <div class="shop_table">
+              <p>Subtotal</p>
+              <span class="subtotal_checkout">$325.00</span>
+            </div>
+            
+            <div class="shop_table">
+              <p>Shipping</p>
+              <span class="">$20.00</span>
+            </div>
+            
+            <div class="shop_table">
+              <p>total</p>
+              <span class="total_checkout">$325.00</span>
+            </div>
+            
+            <div class="button_div">
+              <button type="submit" aria-label>Place order</button>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="input_info">
+          <div class="address">
+            <h2>Delivery Address</h2>
+            
+            <div class="inputs">
+              <label for="">Email</label>
+              <input type="email" placeholder="Enter Your Email" name="Email" required>
+              
+              <label for="">Name</label>
+              <input type="text" placeholder="Enter Your Name" name="Name" required>
+              
+              <label for="">Address</label>
+              <input type="text" placeholder="Enter Your Address" name="Address" required>
+              
+              <label for="">Phone</label>
+              <input type="tel" placeholder="Enter Your Phone" name="Phone" required>
+            </div>
+          </div>
+          
+          <div class="coupon">
+            <h2>Coupon Code</h2>
+            
+            <div class="inputs">
+              <label for="">Coupon Code</label>
+              <input type="text" placeholder="Enter Your Coupon Code" required>
+            </div>
+            
+            <div class="btn_coupon">
+              <button aria-label>Apply Coupon</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  
+  
+        
+  <footer>
+    <div class="container">
+      <div class="big_row">
+        <img loading="lazy" decoding="async" class="logo_footer" src="white_logo.webp" alt="">
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse reiciendis</p>
+        
+        <div class="icons_footer">
+          <a href="#"><i class="fa-solid fa-phone"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      
+      <div class="row">
+        <h4>Find It Fast</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Laptops & Computers</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Smart Phones & Tablets</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> TV & Audio</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Applinces</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Jewelry & Watches</a>
+        </div>
+      </div>
+      
+      <div class="row">
+        <h4>Quick Links</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Your Account</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Returns & Exchanges</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Shipping & Delivery</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Purchase Misotry</a>
+        </div>
+      </div>
+      
+      <div class="row">
+        <h4>Service Us</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Support Center</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Term & Conditions</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Privacy Policy</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Help</a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> FAQS</a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="bottom_footer">
+      <div class="container">
+        <p>&copy; <span>OMAR Store.</span> All Rights Reserved.</p>
+        
+        <div class="payment_img">
+          <img loading="lazy" decoding="async" src="payment_method.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  <script src="submit_checkout.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
