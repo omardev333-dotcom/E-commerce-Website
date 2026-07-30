@@ -80,7 +80,7 @@ function updateCart(){
         total_count += item.quantity
         
         items_input.value += item.name += "  ...  " + "price : " + 
-        total_Price_item + "  ...  " + "count : " + item.quantity + "\n"
+        total_price_item + "  ...  " + "count : " + item.quantity + "\n"
         
         total_Price_input.value = total_Price + 20
         count_Items_input.value = total_count 
