@@ -113,7 +113,7 @@ function updateCart(){
                   <div class="quantity_control">
                     <button class="decrease_quantity" data-index="${index}">-</button>
                     <span class="quantity">${item.quantity}</span>
-                    <button class="increase_quantity" data-index="${index}>+</button>
+                    <button class="increase_quantity" data-index="${index}">+</button>
                   </div>
                 </div>
               </div>
