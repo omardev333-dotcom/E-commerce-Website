@@ -79,11 +79,13 @@ function updateCart(){
         total_Price += total_price_item
         total_count += item.quantity
         
-        items_input.value += item.name += "  ...  " + "price : " + 
-        total_price_item + "  ...  " + "count : " + item.quantity + "\n"
-        
-        total_Price_input.value = total_Price + 20
-        count_Items_input.value = total_count 
+        if (items_input) {
+            items_input.value += item.name + " ... price: " +
+            total_price_item + " ... count: " + item.quantity + "\n";
+            
+            total_Price_input.value = total_Price + 20;
+            count_Items_input.value = total_count;
+        } 
         
         cartItems.innerHTML += `
         <div class="item_cart">
@@ -200,13 +202,12 @@ function updateButtonsState(productId){
     const allMatchingButtons = document.querySelectorAll(`.btn_add_cart[data-id="${productId}"]`);
     
     allMatchingButtons.forEach(button => {
-        button.classList.remove("active")
+        button.classList.remove("active");
 
 button.innerHTML = `
 <i class="fa-solid fa-cart-shopping"></i>
 Add To Cart
-`
-        button.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> Item in cart`
+`;
     })
 }
 
