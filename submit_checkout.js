@@ -7,7 +7,7 @@ form.addEventListener("submit", (e) => {
     
     fetch(scriptURL, {
         method: "POST",
-        body: new FromData(form),
+        body: new FormData(form),
     })
     .then((response)  => {
         setTimeout(() => {
